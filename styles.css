@@ -11,18 +11,10 @@ h1 {
     flex-wrap:wrap;
  } 
 .project {
-    width: 30%;
+    width: 90%;
     margin: 10px;
     padding: 20px 10px; 
     border-radius: 25%;
-}
-.project img{
-width: 600px;
-height: 600px;
-margin: 10px;
-border: 2px solid rgb(74, 125, 141); /* choose a color */
-display: block;
-margin: auto;
 }
 a { /* change the appearance of ALL links */
 text-decoration: none;
