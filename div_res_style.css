@@ -1,33 +1,60 @@
+
+/* Page */
 body {
-  background:#fff;
+  background: #fff;
   font-family: Calibri;
-  font-size: 12pt;
+  font-size: 12pt;         /* body text */
   color: #000;
-  margin: 0.5in; /* matches margin requirement */
-  text-align: center;
+  margin: 0.5in;           /* teacher requirement range */
+  /* Do NOT center everything here */
 }
 
+/* Header: center only name + contact */
 h1 {
-  font-size: 18pt;
+  font-size: 18pt;         /* highest allowed for name */
   font-weight: bold;
   text-align: center;
-  margin-bottom: 24px; /* double-spacing after name */
+  margin: 0 0 16px 0;      /* space after name */
 }
 
+/* If your contact line is in a <p> right under the h1 */
+.header-contact {
+  text-align: center;
+  margin: 0 0 24px 0;      /* double-spacing after header block */
+  font-size: 12pt;
+}
+
+/* Section titles: left-aligned and underlined */
 .section-title {
   font-size: 14pt;
   font-weight: bold;
-  margin-top: 24px; /* double-spacing before section */
-  margin-bottom: 12px; /* space after title */
+  text-decoration: underline;
+  text-align: left;
+  margin: 24px 0 12px 0;   /* double-space before, then space after */
 }
 
-.section-content p,
+/* Section content: left-aligned */
+.section-content {
+  text-align: left;
+}
+
+/* Paragraphs inside content */
+.section-content p {
+  font-size: 12pt;
+  margin: 6px 0;           /* light single-spacing feel */
+}
+
+/* Lists / bullets */
+.section-content ul {
+  margin: 6px 0;
+  padding-left: 20px;      /* standard bullet indent */
+  list-style-type: disc;   /* ensure bullets show */
+}
+
 .section-content li {
   font-size: 12pt;
-  margin: 4px 0; /* single-spacing between bullets/content */
+  margin: 6px 0;           /* single spacing between bullets */
 }
 
-ul {
-  list-style-position: inside
-}
-
+/* Optional emphasis helpers */
+.role { font-style: italic; }
