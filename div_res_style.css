@@ -1,63 +1,32 @@
-
-/* Page basics */
 body {
-  background: #b687e6; /* purple background */
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 16px;        /* space from edges */
+  background: #fff;
+  font-family: "Times New Roman", Arial, Calibri, sans-serif;
+  font-size: 12pt;
+  color: #000;
+  margin: 0.5in; /* matches margin requirement */
 }
 
-/* Main title */
 h1 {
-  color: ForestGreen;
+  font-size: 18pt;
+  font-weight: bold;
   text-align: center;
-  margin: 12px 0 20px;
+  margin-bottom: 24px; /* double-spacing after name */
 }
 
-/* Project list layout */
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;            /* space between cards */
-  justify-content: center;
+.section-title {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-top: 24px; /* double-spacing before section */
+  margin-bottom: 12px; /* space after title */
 }
 
-/* Individual project card */
-.project {
-  flex: 1 1 300px;      /* grow/shrink with a base width */
-  max-width: 420px;     /* limit card width on large screens */
-  background: #ffffff;  /* give the card a white background for contrast */
-  border-radius: 12px;  /* softer, modern rounding */
-  padding: 16px 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12); /* subtle depth */
-  border: 1px solid rgba(0,0,0,0.08);
+.section-content p,
+.section-content li {
+  font-size: 12pt;
+  margin: 4px 0; /* single-spacing between bullets/content */
 }
 
-/* Links */
-a {
-  text-decoration: none;
-  color: rgb(58, 4, 83);
-}
-a:hover {
-  text-decoration: underline;
+ul {
+  padding-left: 20px;
 }
 
-/* Paragraphs inside project cards */
-.project p {
-  text-align: center;
-  margin: 12px;
-}
-
-/* Optional: title inside project card */
-.project h2, .project h3 {
-  text-align: center;
-  margin: 0 0 8px;
-  color: #222;
-}
-
-/* Mobile tweaks */
-@media (max-width: 480px) {
-  body { padding: 12px; }
-  .projects { gap: 12px; }
-  .project { flex: 1 1 100%; max-width: 100%; }
-}
