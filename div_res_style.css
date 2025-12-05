@@ -1,167 +1,63 @@
 
-/* ====== Base / Reset ====== */
-:root {
-  --bg: #f8fafc;      /* light background */
-  --card: #ffffff;    /* white card */
-  --text: #111827;    /* near-black text */
-  --muted: #6b7280;   /* gray text */
-  --accent: #1f2937;  /* dark accent for headings */
-  --border: #e5e7eb;  /* light border */
-  --link: #2563eb;    /* blue link */
-}
-
-html, body {
-  height: 100%;
-}
-
-* {
-  box-sizing: border-box;
-}
-
+/* Page basics */
 body {
+  background: #b687e6; /* purple background */
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  padding: 1.5rem;
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  padding: 16px;        /* space from edges */
 }
 
-/* ====== Page Container (optional wrapper) ====== */
-.page {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1.5rem;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+/* Main title */
+h1 {
+  color: ForestGreen;
+  text-align: center;
+  margin: 12px 0 20px;
 }
 
-/* ====== Header ====== */
-.header {
+/* Project list layout */
+.projects {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.75rem;
-  border-bottom: 2px solid var(--border);
-  padding-bottom: 0.75rem;
-  margin-bottom: 1.25rem;
+  gap: 16px;            /* space between cards */
+  justify-content: center;
 }
 
-.header h1 {
-  font-size: 2rem;
-  margin: 0;
-  color: var(--accent);
+/* Individual project card */
+.project {
+  flex: 1 1 300px;      /* grow/shrink with a base width */
+  max-width: 420px;     /* limit card width on large screens */
+  background: #ffffff;  /* give the card a white background for contrast */
+  border-radius: 12px;  /* softer, modern rounding */
+  padding: 16px 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12); /* subtle depth */
+  border: 1px solid rgba(0,0,0,0.08);
 }
 
-.header p {
-  margin: 0 0 0 auto;
-  color: var(--muted);
-}
-
-.header a {
-  color: var(--link);
-  text-decoration: none;
-}
-.header a:hover {
-  text-decoration: underline;
-}
-
-/* ====== Sections ====== */
-.section {
-  margin: 1.25rem 0;
-}
-
-.section-title {
-  font-size: 1.05rem;
-  letter-spacing: 0.03em;
-  color: var(--accent);
-  text-transform: uppercase;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.section-content {
-  /* keep empty or add spacing tweaks if needed */
-}
-
-/* ====== Experience / Education blocks ====== */
-.job {
-  margin-bottom: 1rem;
-}
-
-/* Optional meta row: organization (left) and dates (right) */
-.job .meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  color: var(--muted);
-}
-
-.job .role {
-  font-style: italic;
-  color: var(--accent);
-  margin: 0.15rem 0 0.35rem;
-}
-
-/* ====== Lists ====== */
-ul {
-  margin: 0.25rem 0 0.75rem;
-  padding-left: 1.25rem;
-}
-
-li {
-  margin: 0.25rem 0;
-}
-
-/* Skills in columns (auto wraps) */
-.skills-list {
-  columns: 2;           /* set to 1 if you want single column */
-  column-gap: 1.5rem;
-}
-
-/* ====== Links ====== */
+/* Links */
 a {
-  color: var(--link);
   text-decoration: none;
+  color: rgb(58, 4, 83);
 }
 a:hover {
   text-decoration: underline;
 }
 
-/* ====== Responsive tweaks ====== */
-@media (max-width: 640px) {
-  .skills-list {
-    columns: 1;
-  }
-  body {
-    padding: 1rem;
-  }
-  .page {
-    padding: 1rem;
-  }
+/* Paragraphs inside project cards */
+.project p {
+  text-align: center;
+  margin: 12px;
 }
 
-/* ====== Print styles ====== */
-@media print {
-  body {
-    background: #fff;
-    padding: 0;
-  }
-  .page {
-    box-shadow: none;
-    border: none;
-    margin: 0;
-    padding: 0;
-  }
-  /* Avoid multi-column skills on print if you prefer */
-  .skills-list {
-    columns: 1;
-  }
-  /* Remove link underlines on print */
-  a {
-    text-decoration: none;
-  }
+/* Optional: title inside project card */
+.project h2, .project h3 {
+  text-align: center;
+  margin: 0 0 8px;
+  color: #222;
 }
 
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  body { padding: 12px; }
+  .projects { gap: 12px; }
+  .project { flex: 1 1 100%; max-width: 100%; }
+}
