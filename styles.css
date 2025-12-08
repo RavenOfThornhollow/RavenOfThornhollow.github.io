@@ -17,6 +17,13 @@ h1 {
     padding: 20px 10px; 
     border-radius: 25%;
 }
+.project img {
+    max-width: 300px; 
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
 .skills img {
     display: block;
     width: auto;
