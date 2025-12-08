@@ -27,7 +27,8 @@ h1 {
   margin-top: 8px;
 }
 a {
-text-decoration: none;
+text-decoration: underline;
+font-weight: bold;
 color: rgb(58, 4, 83);
 }
 .project p { 
