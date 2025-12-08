@@ -18,11 +18,8 @@ h1 {
     border-radius: 25%;
 }
 .skills img {
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-    margin: 10px auto;
+    width: auto;
+    height: 200px;
 }
 a {
 text-decoration: none;
