@@ -17,6 +17,13 @@ h1 {
     padding: 20px 10px; 
     border-radius: 25%;
 }
+.skills img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 10px auto;
+}
 a {
 text-decoration: none;
 color: rgb(58, 4, 83);
